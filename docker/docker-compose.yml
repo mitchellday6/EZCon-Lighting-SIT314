@@ -1,0 +1,80 @@
+
+version: "3.7"
+
+services:
+
+  broker:
+    image: eclipse-mosquitto
+    container_name: broker-edge
+    ports:
+      - 1883:1883
+    volumes:
+      - ./mosquitto:/mosquitto/
+    networks:
+      lighting-net:
+        ipv4_address: 172.40.0.10
+
+  BldServer:
+    image: nodered/node-red:latest
+    container_name: BuildingServer
+    environment:
+      - TZ=Australia/Brisbane
+    ports:
+      - "1882:1880"
+    networks:
+      lighting-net:
+        ipv4_address: 172.40.0.3
+    volumes:
+      - bldserver-data:/data
+  CloudServer:
+    image: nodered/node-red:latest
+    container_name: CloudServer
+    environment:
+      - TZ=Australia/Brisbane
+    ports:
+      - "1885:1880"
+    networks:
+      lighting-net:
+        ipv4_address: 172.40.0.4
+    volumes:
+      - cloudserver-data:/data
+  plc1:
+    image: nodered/node-red:latest
+    container_name: plc1
+    environment:
+      - TZ=Australia/Brisbane
+    ports:
+      - "1880:1880"
+    networks:
+      lighting-net:
+        ipv4_address: 172.40.0.5
+    volumes:
+      - plc1-data:/data
+  plc2:
+    image: nodered/node-red:latest
+    container_name: plc2
+    environment:
+      - TZ=Australia/Brisbane
+    ports:
+      - "1881:1880"
+    networks:
+      lighting-net:
+        ipv4_address: 172.40.0.6
+    
+    volumes:
+      - plc2-data:/data
+  
+
+volumes:
+  plc1-data:
+  plc2-data:
+  bldserver-data:
+  cloudserver-data:
+
+networks:
+  lighting-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.40.0.0/16
+          gateway: 172.40.0.1
