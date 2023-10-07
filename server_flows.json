@@ -1,0 +1,1555 @@
+[
+    {
+        "id": "d8194835ed7af876",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4425281fc4fa10d7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "cld_bldctrl",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a88eaaac42d8d511",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Century HQ Cloud(EZCon)",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1180a9cfc42ddc69",
+        "type": "ui_tab",
+        "name": "Floor 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f758b57eb960b4e6",
+        "type": "ui_tab",
+        "name": "Floor 2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "eb6db46e5b6a1a45",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "1180a9cfc42ddc69",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62cdde1ca76fbf3c",
+        "type": "ui_group",
+        "name": "Room 2",
+        "tab": "1180a9cfc42ddc69",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ab24a83cb0db3213",
+        "type": "ui_group",
+        "name": "Cinema",
+        "tab": "f758b57eb960b4e6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "209228a2aac80a85",
+        "type": "mqtt in",
+        "z": "d8194835ed7af876",
+        "name": "PLC Status",
+        "topic": "/+/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4425281fc4fa10d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12411ce93e2346a1",
+        "type": "mqtt out",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4425281fc4fa10d7",
+        "x": 230,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "38af6961283f012c",
+        "type": "link in",
+        "z": "d8194835ed7af876",
+        "name": "Send MQTT Message",
+        "links": [
+            "ade9dd6e4d7ced3c",
+            "d453a86d92b8b4f0"
+        ],
+        "x": 105,
+        "y": 640,
+        "wires": [
+            [
+                "12411ce93e2346a1",
+                "f25dda04e6d2d7ba"
+            ]
+        ]
+    },
+    {
+        "id": "f25dda04e6d2d7ba",
+        "type": "debug",
+        "z": "d8194835ed7af876",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7f544498f5bb166c",
+        "type": "mqtt in",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "topic": "/+/lightupdate",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "4425281fc4fa10d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "e60b7d3a58da00ba"
+            ]
+        ]
+    },
+    {
+        "id": "e60b7d3a58da00ba",
+        "type": "switch",
+        "z": "d8194835ed7af876",
+        "name": "PLC",
+        "property": "payload.plcid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "5jfud7jdsu3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "jhgj3u45",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "27da9d5bc4e659d4"
+            ],
+            [
+                "02f4581c599a77be"
+            ]
+        ]
+    },
+    {
+        "id": "27da9d5bc4e659d4",
+        "type": "switch",
+        "z": "d8194835ed7af876",
+        "name": "Lights",
+        "property": "payload.light",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "002",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "003",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "004",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "005",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "464fe105dd979ded"
+            ],
+            [
+                "3154f20bbf8de973"
+            ],
+            [
+                "2122de2c54a57c5a"
+            ],
+            [
+                "a4a381d94b4798e1"
+            ],
+            [
+                "85d19b80d6c7b55c"
+            ]
+        ]
+    },
+    {
+        "id": "464fe105dd979ded",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "3a3b576e0104da40"
+            ]
+        ]
+    },
+    {
+        "id": "e69836ee7a07c625",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "eb6db46e5b6a1a45",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "b6c0f6817a2627ab"
+            ]
+        ]
+    },
+    {
+        "id": "3a3b576e0104da40",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "eb6db46e5b6a1a45",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 80,
+        "wires": [
+            [
+                "741f831eddab7157"
+            ]
+        ]
+    },
+    {
+        "id": "6d530b9f28bca39f",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "eb6db46e5b6a1a45",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 160,
+        "wires": [
+            [
+                "94fcf2822f30c8a5"
+            ]
+        ]
+    },
+    {
+        "id": "e883a8b780c42a12",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "62cdde1ca76fbf3c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "d09e3c1fbe02267f"
+            ]
+        ]
+    },
+    {
+        "id": "97729564139ff74c",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "62cdde1ca76fbf3c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "f13212511fb47f73"
+            ]
+        ]
+    },
+    {
+        "id": "02f4581c599a77be",
+        "type": "switch",
+        "z": "d8194835ed7af876",
+        "name": "Lights",
+        "property": "payload.light",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "002",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "003",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "004",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "005",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "b93b1b77bc8db209"
+            ],
+            [
+                "5c03167acf4bda35"
+            ],
+            [
+                "d6e262213a5bc492"
+            ],
+            [
+                "8d8d005a67c61351"
+            ],
+            [
+                "971f68ae664beac9"
+            ]
+        ]
+    },
+    {
+        "id": "7f210bce22963caa",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "ab24a83cb0db3213",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "ffd9a05357f96436"
+            ]
+        ]
+    },
+    {
+        "id": "30e772bfd083a30d",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "ab24a83cb0db3213",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "1ed0b77eaa8367dc"
+            ]
+        ]
+    },
+    {
+        "id": "a829bd3e324dd4fc",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "ab24a83cb0db3213",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 380,
+        "wires": [
+            [
+                "434d4e3149c70e94"
+            ]
+        ]
+    },
+    {
+        "id": "7b17910bb7c0d6f8",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "ab24a83cb0db3213",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "92872a168ec8f183"
+            ]
+        ]
+    },
+    {
+        "id": "e7e18b04046e4a80",
+        "type": "ui_switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "label": "Light {{msg.topic}}",
+        "tooltip": "",
+        "group": "ab24a83cb0db3213",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 460,
+        "wires": [
+            [
+                "1bf29d5d18bb45ae"
+            ]
+        ]
+    },
+    {
+        "id": "741f831eddab7157",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "001",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 80,
+        "wires": [
+            [
+                "5c9b1586feea9149"
+            ]
+        ]
+    },
+    {
+        "id": "b6c0f6817a2627ab",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "002",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 120,
+        "wires": [
+            [
+                "5c9b1586feea9149"
+            ]
+        ]
+    },
+    {
+        "id": "94fcf2822f30c8a5",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "003",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 160,
+        "wires": [
+            [
+                "5c9b1586feea9149"
+            ]
+        ]
+    },
+    {
+        "id": "d09e3c1fbe02267f",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "004",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 200,
+        "wires": [
+            [
+                "5c9b1586feea9149"
+            ]
+        ]
+    },
+    {
+        "id": "f13212511fb47f73",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "005",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 240,
+        "wires": [
+            [
+                "5c9b1586feea9149"
+            ]
+        ]
+    },
+    {
+        "id": "1ed0b77eaa8367dc",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "001",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 300,
+        "wires": [
+            [
+                "b0c2fc48a43b24a7"
+            ]
+        ]
+    },
+    {
+        "id": "ffd9a05357f96436",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "002",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 340,
+        "wires": [
+            [
+                "b0c2fc48a43b24a7"
+            ]
+        ]
+    },
+    {
+        "id": "434d4e3149c70e94",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "003",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 380,
+        "wires": [
+            [
+                "b0c2fc48a43b24a7"
+            ]
+        ]
+    },
+    {
+        "id": "92872a168ec8f183",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "004",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 420,
+        "wires": [
+            [
+                "b0c2fc48a43b24a7"
+            ]
+        ]
+    },
+    {
+        "id": "1bf29d5d18bb45ae",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "pos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "005",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 460,
+        "wires": [
+            [
+                "b0c2fc48a43b24a7"
+            ]
+        ]
+    },
+    {
+        "id": "9771f6476b29dcbd",
+        "type": "function",
+        "z": "d8194835ed7af876",
+        "name": "send",
+        "func": "const plcid = \"5jfud7jdsu3\"\n\nmsg.payload = { \n    task: msg.payload ? \"on\" : \"off\",\n    lights: [\n        msg.id\n    ]\n}\n\nmsg.topic = `/${plcid}/setlights`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 160,
+        "wires": [
+            [
+                "d453a86d92b8b4f0"
+            ]
+        ]
+    },
+    {
+        "id": "5c9b1586feea9149",
+        "type": "switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "property": "external",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 160,
+        "wires": [
+            [],
+            [
+                "9771f6476b29dcbd"
+            ]
+        ]
+    },
+    {
+        "id": "34311f9236bc66d9",
+        "type": "function",
+        "z": "d8194835ed7af876",
+        "name": "send",
+        "func": "const plcid = \"jhgj3u45\"\n\nmsg.payload = { \n    task: msg.payload ? \"on\" : \"off\",\n    lights: [\n        msg.topic\n    ]\n}\n\nmsg.topic = `/${plcid}/setlights`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 380,
+        "wires": [
+            [
+                "d453a86d92b8b4f0"
+            ]
+        ]
+    },
+    {
+        "id": "b0c2fc48a43b24a7",
+        "type": "switch",
+        "z": "d8194835ed7af876",
+        "name": "",
+        "property": "external",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "34311f9236bc66d9"
+            ]
+        ]
+    },
+    {
+        "id": "d453a86d92b8b4f0",
+        "type": "link out",
+        "z": "d8194835ed7af876",
+        "name": "Switches OUt",
+        "mode": "link",
+        "links": [
+            "38af6961283f012c"
+        ],
+        "x": 1345,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3154f20bbf8de973",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 120,
+        "wires": [
+            [
+                "e69836ee7a07c625"
+            ]
+        ]
+    },
+    {
+        "id": "2122de2c54a57c5a",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "6d530b9f28bca39f"
+            ]
+        ]
+    },
+    {
+        "id": "85d19b80d6c7b55c",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 240,
+        "wires": [
+            [
+                "97729564139ff74c"
+            ]
+        ]
+    },
+    {
+        "id": "a4a381d94b4798e1",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [
+                "e883a8b780c42a12"
+            ]
+        ]
+    },
+    {
+        "id": "b93b1b77bc8db209",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "30e772bfd083a30d"
+            ]
+        ]
+    },
+    {
+        "id": "5c03167acf4bda35",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "7f210bce22963caa"
+            ]
+        ]
+    },
+    {
+        "id": "d6e262213a5bc492",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "a829bd3e324dd4fc"
+            ]
+        ]
+    },
+    {
+        "id": "971f68ae664beac9",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "e7e18b04046e4a80"
+            ]
+        ]
+    },
+    {
+        "id": "8d8d005a67c61351",
+        "type": "change",
+        "z": "d8194835ed7af876",
+        "name": "enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.light",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$contains(msg.payload.state, \"on\")",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "external",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "7b17910bb7c0d6f8"
+            ]
+        ]
+    }
+]
